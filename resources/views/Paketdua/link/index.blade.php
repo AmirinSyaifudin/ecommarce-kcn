@@ -23,7 +23,7 @@
                             <tr>
                                 <th> No </th>
                                 <th> URL MARKETPLASE </th>
-                                <th> URL WHATSAPP </th>
+                                <th> URL WHATSAPP</th>
                                 <th> Aksi </th>
                             </tr>
                         </thead>
@@ -31,19 +31,19 @@
                             @forelse ($linkpaketdua as $item => $wikwik)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
-                                <td> {{ $wikwik->marketplase }} </td>
-                                <td> {{ $wikwik->wa }} </td>
+                                <td>{{ $wikwik->marketplase }}</td>
+                                <td>{{ $wikwik->wa }}</td>
                                 <td>
                                     <form method="POST" action="{{ route('linkpaketdua.destroy', $wikwik->id) }}"
                                         onsubmit="return confirm('Hapus Data, Anda Yakin ?')">
                                         @method('DELETE')
                                         @csrf
                                         <a class="btn btn-gradient-warning btn-sm"
-                                            href="{{ route('linkpaketdua.edit', $wikwik->id) }}"><i
-                                                class="mdi mdi-file-check btn-icon-append"></i>
+                                            href="{{ route('linkpaketdua.edit', $wikwik->id) }}">
+                                            <i class="mdi mdi-file-check btn-icon-append"></i>
                                         </a>
-                                        <button class="btn btn-gradient-danger btn-sm"><i
-                                                class="mdi mdi-delete"></i>
+                                        <button class="btn btn-gradient-danger btn-sm">
+                                            <i class="mdi mdi-delete"></i>
                                         </button>
                                     </form>
 

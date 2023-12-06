@@ -5,23 +5,23 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">DATA LINK </h4> <br>
-                    <form class="forms-sample" action="{{ route('linkpaketdua.update', $data->id) }}" method="POST"
+                    <h4 class="card-title">EDIT DATA LINK </h4> <br>
+                    <form class="forms-sample" action="{{ route('linkpaketdua.update', $linkpaketdua->id) }}" method="POST"
                         enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
                         <div class="form-group">
                             <label for="exampleInputName1">URL MARKETPLASE</label>
-                            <input type="text" name="url_marketplase" class="form-control" id="exampleInputName1"
-                                placeholder="url marketplase" value="{{ old('url_marketplase', $data->url_marketplase) }}">
+                            <input type="text" name="marketplase" class="form-control" id="exampleInputName1"
+                                placeholder="marketplase" value="{{ old('marketplase', $linkpaketdua->marketplase) }}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputName1">URL WHATSAPP</label>
-                            <input type="text" name="url_wa" class="form-control" id="exampleInputName1"
-                                placeholder="Instagram" value="{{ old('url_wa', $data->url_wa) }}">
+                            <input type="text" name="wa" class="form-control" id="exampleInputName1"
+                                placeholder="WA" value="{{ old('wa', $linkpaketdua->wa) }}">
                         </div>
 
-                        <div class="control-group">
+                        {{-- <div class="control-group">
                             <label class="control-label">Itenerary</label>
                             <div class="controls controls-row">
                                 <input type="time" name="waktu[]" id="text1"
@@ -36,10 +36,10 @@
                                     style="border-radius: 10px; margin-left: 8px; height: 48px"
                                     id="dynamic-ar"><i class="fas fa-plus-circle"></i></button>
                             </div>
-                        </div>
+                        </div> --}}
                         
                         <button type="submit" class="btn btn-gradient-primary mr-2">Update Data</button>
-                        <button class="btn btn-light">Cancel</button>
+                        <a href="{{ route('linkpaketdua.index') }}" class="btn btn-light">Cancel</a>
                     </form>
                 </div>
             </div>

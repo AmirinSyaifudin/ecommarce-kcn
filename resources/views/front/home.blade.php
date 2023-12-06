@@ -135,7 +135,7 @@
                     <div class="row">
                         <div class="col-lg-12 text-center mb-5">
                             <div class="section-title">
-                                <h4>Gallery UKM</h4>
+                                <h4>Gallery</h4>
                             </div>
                         </div>
                     </div>

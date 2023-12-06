@@ -72,6 +72,7 @@ class LinkPaketduaController extends Controller
     public function edit($id)
     {
         $linkpaketdua = Linkpaketdua::findOrFail($id);
+
         return view('Paketdua.link.edit', compact('linkpaketdua'));
     }
 
@@ -86,14 +87,14 @@ class LinkPaketduaController extends Controller
     {
         $request->validate([
             'marketplase' => 'required',
-            'wa' => 'required',
+            'wa'          => 'required',
         ]);
 
         $data = $request->all();
         
-        Link::findOrFail($id)->update($data);
+        Linkpaketdua::findOrFail($id)->update($data);
 
-        toast('Profile berhasil diubah', 'success')->position('bottom-end');
+        toast('Link Paket Dua berhasil diubah', 'success')->position('bottom-end');
         return redirect()->route('linkpaketdua.index');
     }
 

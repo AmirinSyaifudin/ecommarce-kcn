@@ -47,13 +47,10 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'Paketdua'], function () {
         Route::resource('youtubepaketdua', 'YoutubePaketduaController');
         Route::resource('mediapaketdua', 'MediaPaketduaController');
         Route::resource('gallerypaketdua', 'GalleryPaketduaController');
-        // Route::resource('kategori', 'KategoriprodukController');
         Route::resource('productpaketdua', 'ProdukPaketduaController');
         Route::resource('linkpaketdua', 'LinkPaketduaController');
-        // Route::resource('produkunggulan', 'ProdukunggulanController');
     });
 });
-
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'Superadmin'], function () {
     Route::namespace('Superadmin')->group(function (){

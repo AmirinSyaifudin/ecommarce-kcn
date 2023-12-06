@@ -19,9 +19,9 @@
                     <table class="table table-hover text-center">
                         <thead>
                             <tr>
+                                <th> No </th>
                                 <th> Produk </th>
                                 <th> Foto </th>
-                                {{-- <th> Kategori </th> --}}
                                 <th> Deskripsi </th>
                                 <th> Aksi </th>
                             </tr>
@@ -29,11 +29,11 @@
                         <tbody>
                             @forelse ($produk as $item => $data)
                                 <tr>
+                                    <td>{{ $loop->index + 1 }}</td>
                                     <td> {{ \Illuminate\Support\Str::limit($data->nama, 20, $end = '...') }} </td>
-                                    <td> <img src="{{ asset($data->foto) }}"
-                                            style="border-radius: 0; width: 150px; height: 100px; object-fit: cover;"
-                                            alt=""> </td>
-                                    {{-- <td> {{ $data->kategori->nama }} </td> --}}
+                                    <td> 
+                                        <img src="{{ asset($data->foto) }}" style="border-radius: 0; width: 150px; height: 100px; object-fit: cover;" alt=""> 
+                                    </td>
                                     <td> {{ \Illuminate\Support\Str::limit($data->deskripsi, 10, $end = '...') }} </td>
                                     <td>
                                         <form method="POST" action="{{ route('product.destroy', $data->id) }}"

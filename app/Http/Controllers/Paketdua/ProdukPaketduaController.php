@@ -96,6 +96,7 @@ class ProdukPaketduaController extends Controller
     public function edit($id)
     {
         $produk = Produk::findOrFail($id);
+        
         return view('Paketdua.produk.edit', compact('produk'));
     }
 

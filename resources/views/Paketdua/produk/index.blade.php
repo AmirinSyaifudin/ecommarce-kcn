@@ -11,8 +11,9 @@
                             <h4 class="card-title">Data Produk Paket Dua</h4>
                         </div>
                         <div class="col-md-6 text-right">
-                            <a href="{{ route('productpaketdua.create') }}" class="btn btn-gradient-primary btn-sm">Add Data <i
-                                    class="mdi mdi-loupe btn-icon-append"></i></a>
+                            <a href="{{ route('productpaketdua.create') }}" class="btn btn-gradient-primary btn-sm">
+                                Add Data <i class="mdi mdi-loupe btn-icon-append"></i>
+                            </a>
                         </div>
                     </div>
                     <table class="table table-hover text-center">
@@ -29,7 +30,7 @@
                             @forelse ($produk as $item => $data)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td> {{ \Illuminate\Support\Str::limit($data->nama, 20, $end = '...') }} </td>
+                                    <td>{{ \Illuminate\Support\Str::limit($data->nama, 20, $end = '...') }} </td>
                                     <td> 
                                         <img src="{{ asset($data->foto) }}" style="border-radius: 0; width: 150px; height: 100px; object-fit: cover;" alt=""> 
                                     </td>

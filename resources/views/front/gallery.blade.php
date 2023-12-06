@@ -16,9 +16,9 @@
 
             </div>
         </div> --}}
-    </section><!-- End Header -->
+    </section>
+    <!-- End Header -->
 
-    <!-- Profile UKM -->
     <main id="main">
         <section id="gallery" class="gallery">
             <div class="choose-us-area pt-70 pb-70" id="page">
@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-lg-12 text-center mb-5">
                             <div class="section-title">
-                                <h4>Gallery UKM</h4>
+                                <h4>Gallery</h4>
                             </div>
                         </div>
                     </div>
@@ -47,12 +47,12 @@
                     </div>
                 </div>
             </div>
-        </section><!-- End Gallery -->
+        </section>
         <div class="d-block d-flex justify-content-center">
             {{ $gallery->links() }}
         </div>
-    </main><!-- End #main -->
-    <!-- End Profile UKM -->
+    </main>
+    <!-- End #main -->
 @endsection
 
 @push('script')
